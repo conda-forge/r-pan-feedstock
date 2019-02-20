@@ -1,4 +1,4 @@
-{% set version = '1.4' %}
+{% set version = "1.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pan_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pan/pan_{{ version }}.tar.gz
-  sha256: e6a83f0799cc9714f5052f159be6e82ececd013d1626f40c828cda0ceb8b76dc
+  sha256: adc0df816ae38bc188bce0aef3aeb71d19c0fc26e063107eeee71a81a49463b6
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
