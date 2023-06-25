@@ -16,26 +16,25 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('fortran') }}  # [not win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_fortran') }}        # [win]
-    - {{ posix }}filesystem        # [win]
+    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ posix }}filesystem            # [win]
     - {{ posix }}make
-    - {{ posix }}sed  # [win]
-    - {{ posix }}coreutils  # [win]
+    - {{ posix }}sed                   # [win]
+    - {{ posix }}coreutils             # [win]
   host:
     - r-base
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
+    - {{ native }}gcc-libs             # [win]
 
 test:
   commands:
@@ -44,7 +43,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=pan
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Multiple imputation for multivariate panel or clustered data.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
