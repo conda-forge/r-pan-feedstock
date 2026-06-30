@@ -1,4 +1,4 @@
-{% set version = "1.9" %}
+{% set version = "2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pan_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pan/pan_{{ version }}.tar.gz
-  sha256: cd91232d653783ea7f34c0eebaa80c472b5501b21eea500c4c1a8e57116c6eea
+  sha256: da501a2d4083aef8a8771f96d7de874a7236ee5e94a23ba9bbdc7cb3b1002722
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
